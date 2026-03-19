@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-readarray -t logo <"$(dirname "$0")/../dep/logo"
+readarray -t logo <"/etc/ohfetch/logo"
 
 host=$(hostname)
 mem=$(free -h | awk '/^[Mm]em:/ {print $3" / "$2}' | tr -d 'i' 2>/dev/null || echo unknown)
